@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   
-  <title>compas_occ - compas_line_to_occ_line</title>
+  <title>compas_occ - Sphere</title>
   
 
   <meta charset="utf-8" />
@@ -19,11 +19,11 @@
   <link rel="stylesheet" type="text/css" href="../../_static/css/compas-reference.css" />
 
   
-    <link rel="next" title="Box" href="compas_occ.interop.shapes.Box.html" />
+    <link rel="next" title="Sphere.copy" href="compas_occ.interop.shapes.Sphere.copy.html" />
   
 
   
-    <link rel="prev" title="compas_vector_from_occ_vector" href="compas_occ.interop.primitives.compas_vector_from_occ_vector.html" />
+    <link rel="prev" title="Box.validate_json" href="compas_occ.interop.shapes.Box.validate_json.html" />
   
 
   <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
@@ -88,19 +88,68 @@
             
               <li class="breadcrumb-item"><a href="../compas_occ.interop.html">compas_occ.interop</a></li>
             
-            <li class="breadcrumb-item active" aria-current="page">compas_line_to_occ_line</li>
+            <li class="breadcrumb-item active" aria-current="page">Sphere</li>
           </ol>
         </nav>
         
 
         
         
-        <section class="detail" id="compas-line-to-occ-line">
-<h1>compas_line_to_occ_line</h1>
-<dl class="py function">
-<dt class="sig sig-object py" id="compas_occ.interop.primitives.compas_line_to_occ_line">
-<span class="sig-prename descclassname"><span class="pre">compas_occ.interop.primitives.</span></span><span class="sig-name descname"><span class="pre">compas_line_to_occ_line</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://compas.dev/compas/latest/api/generated/compas.geometry.Line.html#compas.geometry.Line" title="(in COMPAS v1.5)"><span class="pre">compas.geometry.primitives.line.Line</span></a></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">OCC.Core.gp.gp_Lin</span><a class="reference external" href="https://github.com/compas-dev/compas_occ/blob/main/src/compas_occ/interop/primitives.py#L37"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
-<dd></dd></dl>
+        <section class="detail" id="sphere">
+<h1>Sphere</h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="compas_occ.interop.shapes.Sphere">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">compas_occ.interop.shapes.</span></span><span class="sig-name descname"><span class="pre">Sphere</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/compas-dev/compas_occ/blob/main/src/compas_occ/interop/shapes.py#L48"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://compas.dev/compas/latest/api/generated/compas.geometry.Sphere.html#compas.geometry.Sphere" title="(in COMPAS v1.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">compas.geometry.shapes.sphere.Sphere</span></code></a></p>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.interop.shapes.Sphere.copy.html#compas_occ.interop.shapes.Sphere.copy" title="compas_occ.interop.shapes.Sphere.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>([cls])</p></td>
+<td><p>Make an independent copy of the data object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.interop.shapes.Sphere.from_data.html#compas_occ.interop.shapes.Sphere.from_data" title="compas_occ.interop.shapes.Sphere.from_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_data</span></code></a>(data)</p></td>
+<td><p>Construct a sphere from its data representation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.interop.shapes.Sphere.from_json.html#compas_occ.interop.shapes.Sphere.from_json" title="compas_occ.interop.shapes.Sphere.from_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_json</span></code></a>(filepath)</p></td>
+<td><p>Construct an object from serialized data contained in a JSON file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.interop.shapes.Sphere.to_data.html#compas_occ.interop.shapes.Sphere.to_data" title="compas_occ.interop.shapes.Sphere.to_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_data</span></code></a>()</p></td>
+<td><p>Convert an object to its native data representation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.interop.shapes.Sphere.to_json.html#compas_occ.interop.shapes.Sphere.to_json" title="compas_occ.interop.shapes.Sphere.to_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_json</span></code></a>(filepath[, pretty])</p></td>
+<td><p>Serialize the data representation of an object to a JSON file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.interop.shapes.Sphere.to_occ_shape.html#compas_occ.interop.shapes.Sphere.to_occ_shape" title="compas_occ.interop.shapes.Sphere.to_occ_shape"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_occ_shape</span></code></a>()</p></td>
+<td><p>Convert a COMPAS sphere to an OCC shape.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.interop.shapes.Sphere.to_occ_shell.html#compas_occ.interop.shapes.Sphere.to_occ_shell" title="compas_occ.interop.shapes.Sphere.to_occ_shell"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_occ_shell</span></code></a>()</p></td>
+<td><p>Convert a COMPAS sphere to an OCC shell.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.interop.shapes.Sphere.to_occ_solid.html#compas_occ.interop.shapes.Sphere.to_occ_solid" title="compas_occ.interop.shapes.Sphere.to_occ_solid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_occ_solid</span></code></a>()</p></td>
+<td><p>Convert a COMPAS sphere to an OCC solid.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.interop.shapes.Sphere.to_vertices_and_faces.html#compas_occ.interop.shapes.Sphere.to_vertices_and_faces" title="compas_occ.interop.shapes.Sphere.to_vertices_and_faces"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_vertices_and_faces</span></code></a>([u, v])</p></td>
+<td><p>Returns a list of vertices and faces</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.interop.shapes.Sphere.transform.html#compas_occ.interop.shapes.Sphere.transform" title="compas_occ.interop.shapes.Sphere.transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform</span></code></a>(transformation)</p></td>
+<td><p>Transform the sphere.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.interop.shapes.Sphere.transformed.html#compas_occ.interop.shapes.Sphere.transformed" title="compas_occ.interop.shapes.Sphere.transformed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transformed</span></code></a>(transformation)</p></td>
+<td><p>Returns a transformed copy of this primitive.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.interop.shapes.Sphere.validate_data.html#compas_occ.interop.shapes.Sphere.validate_data" title="compas_occ.interop.shapes.Sphere.validate_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_data</span></code></a>()</p></td>
+<td><p>Validate the data of this object against its data schema (<cite>self.DATASCHEMA</cite>).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.interop.shapes.Sphere.validate_json.html#compas_occ.interop.shapes.Sphere.validate_json" title="compas_occ.interop.shapes.Sphere.validate_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_json</span></code></a>()</p></td>
+<td><p>Validate the data loaded from a JSON representation of the data of this object against its data schema (<cite>self.DATASCHEMA</cite>).</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 </section>
 
@@ -143,7 +192,7 @@
       <div class="d-none d-xl-block col-xl-2 compas-toc" role="toc">
         
         <ul class="nav flex-column" id="compas-toc">
-<li class="nav-item"><a class="nav-link reference internal" href="#">compas_line_to_occ_line</a></li>
+<li class="nav-item"><a class="nav-link reference internal" href="#">Sphere</a></li>
 </ul>
 
       </div>
@@ -155,20 +204,20 @@
   <footer class="compas-footer">
     <nav class="nav p-2">
       
-        <a href="compas_occ.interop.primitives.compas_vector_from_occ_vector.html" title="compas_vector_from_occ_vector" class="nav-link footer-link float-start text-left d-flex w-50" rel="prev">
+        <a href="compas_occ.interop.shapes.Box.validate_json.html" title="Box.validate_json" class="nav-link footer-link float-start text-left d-flex w-50" rel="prev">
           <div class="nav-button p-2 m-2"><i class="fas fa-arrow-left"></i></div>
           <div class="nav-title flex-grow-1 align-self-center">
             <div class="nav-direction small font-weight-light">Previous</div>
-            compas_vector_from_occ_vector
+            Box.validate_json
           </div>
         </a>
       
 
       
-        <a href="compas_occ.interop.shapes.Box.html" title="Box" class="nav-link footer-link float-end text-right d-flex w-50" rel="next">
+        <a href="compas_occ.interop.shapes.Sphere.copy.html" title="Sphere.copy" class="nav-link footer-link float-end text-right d-flex w-50" rel="next">
           <div class="nav-title footer-link flex-grow-1 align-self-center">
             <div class="nav-direction small font-weight-light">Next</div>
-            Box
+            Sphere.copy
           </div>
           <div class="nav-button p-2 m-2"><i class="fas fa-arrow-right"></i></div>
         </a>

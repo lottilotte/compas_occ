@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   
-  <title>compas_occ - compas_occ.brep</title>
+  <title>compas_occ - Box.to_occ_shell</title>
   
 
   <meta charset="utf-8" />
@@ -11,19 +11,19 @@
   <meta name="author" content="compas-dev" />
   <meta name="description" content="" />
 
-  <link rel="shortcut icon" href="../_static/images/compas.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../../_static/images/compas.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
-  <link rel="stylesheet" type="text/css" href="../_static/css/compas.css" />
-  <link rel="stylesheet" type="text/css" href="../_static/css/compas-reference.css" />
+  <link rel="stylesheet" type="text/css" href="../../_static/css/compas.css" />
+  <link rel="stylesheet" type="text/css" href="../../_static/css/compas-reference.css" />
 
   
-    <link rel="next" title="BRepShape" href="generated/compas_occ.brep.datastructures.BRepShape.html" />
+    <link rel="next" title="Box.to_occ_solid" href="compas_occ.interop.shapes.Box.to_occ_solid.html" />
   
 
   
-    <link rel="prev" title="compas_occ" href="compas_occ.html" />
+    <link rel="prev" title="Box.to_occ_shape" href="compas_occ.interop.shapes.Box.to_occ_shape.html" />
   
 
   <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
@@ -35,7 +35,7 @@
     <nav class="navbar navbar-expand navbar-dark col flex-column flex-md-row text-center">
       <!-- brand -->
       <a class="navbar-brand" href="https://compas.dev/compas_occ/">
-        <img src="../_static/images/compas_icon_white.png" alt="COMPAS OCC" width="48px" height="48px" />
+        <img src="../../_static/images/compas_icon_white.png" alt="COMPAS OCC" width="48px" height="48px" />
       </a>
       <!-- brand -->
       <!-- primary -->
@@ -80,52 +80,31 @@
         
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb mb-3 bg-white px-0">
-            <li class="breadcrumb-item"><a href="../index.html">docs</a></li>
+            <li class="breadcrumb-item"><a href="../../index.html">docs</a></li>
             
-              <li class="breadcrumb-item"><a href="../api.html">API Reference</a></li>
+              <li class="breadcrumb-item"><a href="../../api.html">API Reference</a></li>
             
-              <li class="breadcrumb-item"><a href="compas_occ.html">compas_occ</a></li>
+              <li class="breadcrumb-item"><a href="../compas_occ.html">compas_occ</a></li>
             
-            <li class="breadcrumb-item active" aria-current="page">compas_occ.brep</li>
+              <li class="breadcrumb-item"><a href="../compas_occ.interop.html">compas_occ.interop</a></li>
+            
+              <li class="breadcrumb-item"><a href="compas_occ.interop.shapes.Box.html">Box</a></li>
+            
+            <li class="breadcrumb-item active" aria-current="page">Box.to_occ_shell</li>
           </ol>
         </nav>
         
 
         
         
-        <span class="target" id="module-compas_occ.brep"></span><section id="compas-occ-brep">
-<h1>compas_occ.brep</h1>
-<section id="datastructures">
-<h2>Datastructures</h2>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/compas_occ.brep.datastructures.BRepShape.html#compas_occ.brep.datastructures.BRepShape" title="compas_occ.brep.datastructures.BRepShape"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datastructures.BRepShape</span></code></a></p></td>
-<td><p>Wrapper for TopoDS_Shape.</p></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="booleans">
-<h2>Booleans</h2>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/compas_occ.brep.booleans.boolean_union_shape_shape.html#compas_occ.brep.booleans.boolean_union_shape_shape" title="compas_occ.brep.booleans.boolean_union_shape_shape"><code class="xref py py-obj docutils literal notranslate"><span class="pre">booleans.boolean_union_shape_shape</span></code></a></p></td>
-<td><p>Compute the boolean union of two BRep shapes.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/compas_occ.brep.booleans.boolean_difference_shape_shape.html#compas_occ.brep.booleans.boolean_difference_shape_shape" title="compas_occ.brep.booleans.boolean_difference_shape_shape"><code class="xref py py-obj docutils literal notranslate"><span class="pre">booleans.boolean_difference_shape_shape</span></code></a></p></td>
-<td><p>Compute the boolean difference between two BRep shapes.</p></td>
-</tr>
-</tbody>
-</table>
-</section>
+        <section class="detail" id="box-to-occ-shell">
+<h1>Box.to_occ_shell</h1>
+<dl class="py method">
+<dt class="sig sig-object py" id="compas_occ.interop.shapes.Box.to_occ_shell">
+<span class="sig-prename descclassname"><span class="pre">Box.</span></span><span class="sig-name descname"><span class="pre">to_occ_shell</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">OCC.Core.TopoDS.TopoDS_Shell</span><a class="reference external" href="https://github.com/compas-dev/compas_occ/blob/main/src/compas_occ/interop/shapes.py#L43"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Convert a COMPAS box to an OCC shell.</p>
+</dd></dl>
+
 </section>
 
         
@@ -133,7 +112,7 @@
       <!-- content -->
       <!-- sidebar -->
       <div class="col-12 col-md-3 compas-sidebar" role="navigation">
-        <form id="search" class="d-flex align-items-center compas-searchbox" action="../search.html" method="get">
+        <form id="search" class="d-flex align-items-center compas-searchbox" action="../../search.html" method="get">
           <input class="form-control" type="text" name="q" placeholder="Search docs" />
           <input type="hidden" name="check_keywords" value="yes" />
           <input type="hidden" name="area" value="default" />
@@ -145,18 +124,18 @@
         
           <div id="compas-navigation" class="collapse compas-navigation">
           <ul class="nav flex-column active">
-<li class="nav-item"><a class="nav-link reference internal" href="../index.html">Introduction</a></li>
-<li class="nav-item"><a class="nav-link reference internal" href="../gettingstarted.html">Getting Started</a></li>
-<li class="nav-item active"><a class="nav-link reference internal" href="../api.html">API Reference</a><ul class="nav flex-column active">
-<li class="nav-item active"><a class="nav-link reference internal" href="compas_occ.html">compas_occ</a><ul class="nav flex-column active">
-<li class="nav-item active"><a class="nav-link active current reference internal" href="#">compas_occ.brep</a></li>
-<li class="nav-item"><a class="nav-link reference internal" href="compas_occ.geometry.html">compas_occ.geometry</a></li>
-<li class="nav-item"><a class="nav-link reference internal" href="compas_occ.interop.html">compas_occ.interop</a></li>
+<li class="nav-item"><a class="nav-link reference internal" href="../../index.html">Introduction</a></li>
+<li class="nav-item"><a class="nav-link reference internal" href="../../gettingstarted.html">Getting Started</a></li>
+<li class="nav-item active"><a class="nav-link reference internal" href="../../api.html">API Reference</a><ul class="nav flex-column active">
+<li class="nav-item active"><a class="nav-link reference internal" href="../compas_occ.html">compas_occ</a><ul class="nav flex-column active">
+<li class="nav-item"><a class="nav-link reference internal" href="../compas_occ.brep.html">compas_occ.brep</a></li>
+<li class="nav-item"><a class="nav-link reference internal" href="../compas_occ.geometry.html">compas_occ.geometry</a></li>
+<li class="nav-item active"><a class="nav-link reference internal" href="../compas_occ.interop.html">compas_occ.interop</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="nav-item"><a class="nav-link reference internal" href="../license.html">License</a></li>
+<li class="nav-item"><a class="nav-link reference internal" href="../../license.html">License</a></li>
 </ul>
 
           </div>
@@ -167,11 +146,7 @@
       <div class="d-none d-xl-block col-xl-2 compas-toc" role="toc">
         
         <ul class="nav flex-column" id="compas-toc">
-<li class="nav-item"><a class="nav-link reference internal" href="#">compas_occ.brep</a><ul class="nav flex-column">
-<li class="nav-item"><a class="nav-link reference internal" href="#datastructures">Datastructures</a></li>
-<li class="nav-item"><a class="nav-link reference internal" href="#booleans">Booleans</a></li>
-</ul>
-</li>
+<li class="nav-item"><a class="nav-link reference internal" href="#">Box.to_occ_shell</a></li>
 </ul>
 
       </div>
@@ -183,20 +158,20 @@
   <footer class="compas-footer">
     <nav class="nav p-2">
       
-        <a href="compas_occ.html" title="compas_occ" class="nav-link footer-link float-start text-left d-flex w-50" rel="prev">
+        <a href="compas_occ.interop.shapes.Box.to_occ_shape.html" title="Box.to_occ_shape" class="nav-link footer-link float-start text-left d-flex w-50" rel="prev">
           <div class="nav-button p-2 m-2"><i class="fas fa-arrow-left"></i></div>
           <div class="nav-title flex-grow-1 align-self-center">
             <div class="nav-direction small font-weight-light">Previous</div>
-            compas_occ
+            Box.to_occ_shape
           </div>
         </a>
       
 
       
-        <a href="generated/compas_occ.brep.datastructures.BRepShape.html" title="BRepShape" class="nav-link footer-link float-end text-right d-flex w-50" rel="next">
+        <a href="compas_occ.interop.shapes.Box.to_occ_solid.html" title="Box.to_occ_solid" class="nav-link footer-link float-end text-right d-flex w-50" rel="next">
           <div class="nav-title footer-link flex-grow-1 align-self-center">
             <div class="nav-direction small font-weight-light">Next</div>
-            BRepShape
+            Box.to_occ_solid
           </div>
           <div class="nav-button p-2 m-2"><i class="fas fa-arrow-right"></i></div>
         </a>
@@ -254,9 +229,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.0.0/anchor.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
 
-  <script src="../_static/underscore.js"></script>
-  <script src="../_static/doctools.js"></script>
-  <script src="../_static/js/searchtools_.js"></script>
+  <script src="../../_static/underscore.js"></script>
+  <script src="../../_static/doctools.js"></script>
+  <script src="../../_static/js/searchtools_.js"></script>
 
   <script>
   $(document).ready(function() {

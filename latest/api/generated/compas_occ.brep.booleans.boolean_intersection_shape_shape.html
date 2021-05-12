@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   
-  <title>compas_occ - Sphere.copy</title>
+  <title>compas_occ - boolean_intersection_shape_shape</title>
   
 
   <meta charset="utf-8" />
@@ -19,11 +19,11 @@
   <link rel="stylesheet" type="text/css" href="../../_static/css/compas-reference.css" />
 
   
-    <link rel="next" title="Sphere.from_data" href="compas_occ.interop.shapes.Sphere.from_data.html" />
+    <link rel="next" title="compas_occ.geometry" href="../compas_occ.geometry.html" />
   
 
   
-    <link rel="prev" title="Sphere" href="compas_occ.interop.shapes.Sphere.html" />
+    <link rel="prev" title="boolean_difference_shape_shape" href="compas_occ.brep.booleans.boolean_difference_shape_shape.html" />
   
 
   <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
@@ -86,32 +86,21 @@
             
               <li class="breadcrumb-item"><a href="../compas_occ.html">compas_occ</a></li>
             
-              <li class="breadcrumb-item"><a href="../compas_occ.interop.html">compas_occ.interop</a></li>
+              <li class="breadcrumb-item"><a href="../compas_occ.brep.html">compas_occ.brep</a></li>
             
-              <li class="breadcrumb-item"><a href="compas_occ.interop.shapes.Sphere.html">Sphere</a></li>
-            
-            <li class="breadcrumb-item active" aria-current="page">Sphere.copy</li>
+            <li class="breadcrumb-item active" aria-current="page">boolean_intersection_shape_shape</li>
           </ol>
         </nav>
         
 
         
         
-        <section class="detail" id="sphere-copy">
-<h1>Sphere.copy</h1>
-<dl class="py method">
-<dt class="sig sig-object py" id="compas_occ.interop.shapes.Sphere.copy">
-<span class="sig-prename descclassname"><span class="pre">Sphere.</span></span><span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/compas-dev/compas_occ/blob/main/src/compas_occ/interop/shapes.py#L163"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
-<dd><p>Make an independent copy of the data object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>cls</strong> (<a class="reference external" href="https://compas.dev/compas/latest/api/generated/compas.data.Data.html#compas.data.Data" title="(in COMPAS v1.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">compas.data.Data</span></code></a>, optional) – The type of data object to return.
-Defaults to the type of the current data object.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><a class="reference external" href="https://compas.dev/compas/latest/api/generated/compas.data.Data.html#compas.data.Data" title="(in COMPAS v1.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">compas.data.Data</span></code></a> – A separate, but identical data object.</p>
-</dd>
-</dl>
+        <section class="detail" id="boolean-intersection-shape-shape">
+<h1>boolean_intersection_shape_shape</h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="compas_occ.brep.booleans.boolean_intersection_shape_shape">
+<span class="sig-prename descclassname"><span class="pre">compas_occ.brep.booleans.</span></span><span class="sig-name descname"><span class="pre">boolean_intersection_shape_shape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="compas_occ.brep.datastructures.BRepShape.html#compas_occ.brep.datastructures.BRepShape" title="compas_occ.brep.datastructures.BRepShape"><span class="pre">compas_occ.brep.datastructures.BRepShape</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="compas_occ.brep.datastructures.BRepShape.html#compas_occ.brep.datastructures.BRepShape" title="compas_occ.brep.datastructures.BRepShape"><span class="pre">compas_occ.brep.datastructures.BRepShape</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">convert</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="compas_occ.brep.datastructures.BRepShape.html#compas_occ.brep.datastructures.BRepShape" title="compas_occ.brep.datastructures.BRepShape"><span class="pre">compas_occ.brep.datastructures.BRepShape</span></a><a class="reference external" href="https://github.com/compas-dev/compas_occ/blob/main/src/compas_occ/brep/booleans.py#L36"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Compute the boolean intersection between two BRep shapes.</p>
 </dd></dl>
 
 </section>
@@ -137,9 +126,9 @@ Defaults to the type of the current data object.</p>
 <li class="nav-item"><a class="nav-link reference internal" href="../../gettingstarted.html">Getting Started</a></li>
 <li class="nav-item active"><a class="nav-link reference internal" href="../../api.html">API Reference</a><ul class="nav flex-column active">
 <li class="nav-item active"><a class="nav-link reference internal" href="../compas_occ.html">compas_occ</a><ul class="nav flex-column active">
-<li class="nav-item"><a class="nav-link reference internal" href="../compas_occ.brep.html">compas_occ.brep</a></li>
+<li class="nav-item active"><a class="nav-link reference internal" href="../compas_occ.brep.html">compas_occ.brep</a></li>
 <li class="nav-item"><a class="nav-link reference internal" href="../compas_occ.geometry.html">compas_occ.geometry</a></li>
-<li class="nav-item active"><a class="nav-link reference internal" href="../compas_occ.interop.html">compas_occ.interop</a></li>
+<li class="nav-item"><a class="nav-link reference internal" href="../compas_occ.interop.html">compas_occ.interop</a></li>
 </ul>
 </li>
 </ul>
@@ -155,7 +144,7 @@ Defaults to the type of the current data object.</p>
       <div class="d-none d-xl-block col-xl-2 compas-toc" role="toc">
         
         <ul class="nav flex-column" id="compas-toc">
-<li class="nav-item"><a class="nav-link reference internal" href="#">Sphere.copy</a></li>
+<li class="nav-item"><a class="nav-link reference internal" href="#">boolean_intersection_shape_shape</a></li>
 </ul>
 
       </div>
@@ -167,20 +156,20 @@ Defaults to the type of the current data object.</p>
   <footer class="compas-footer">
     <nav class="nav p-2">
       
-        <a href="compas_occ.interop.shapes.Sphere.html" title="Sphere" class="nav-link footer-link float-start text-left d-flex w-50" rel="prev">
+        <a href="compas_occ.brep.booleans.boolean_difference_shape_shape.html" title="boolean_difference_shape_shape" class="nav-link footer-link float-start text-left d-flex w-50" rel="prev">
           <div class="nav-button p-2 m-2"><i class="fas fa-arrow-left"></i></div>
           <div class="nav-title flex-grow-1 align-self-center">
             <div class="nav-direction small font-weight-light">Previous</div>
-            Sphere
+            boolean_difference_shape_shape
           </div>
         </a>
       
 
       
-        <a href="compas_occ.interop.shapes.Sphere.from_data.html" title="Sphere.from_data" class="nav-link footer-link float-end text-right d-flex w-50" rel="next">
+        <a href="../compas_occ.geometry.html" title="compas_occ.geometry" class="nav-link footer-link float-end text-right d-flex w-50" rel="next">
           <div class="nav-title footer-link flex-grow-1 align-self-center">
             <div class="nav-direction small font-weight-light">Next</div>
-            Sphere.from_data
+            compas_occ.geometry
           </div>
           <div class="nav-button p-2 m-2"><i class="fas fa-arrow-right"></i></div>
         </a>

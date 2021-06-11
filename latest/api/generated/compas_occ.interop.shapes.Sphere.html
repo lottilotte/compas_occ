@@ -117,11 +117,17 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.interop.shapes.Sphere.from_json.html#compas_occ.interop.shapes.Sphere.from_json" title="compas_occ.interop.shapes.Sphere.from_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_json</span></code></a>(filepath)</p></td>
 <td><p>Construct an object from serialized data contained in a JSON file.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.interop.shapes.Sphere.to_data.html#compas_occ.interop.shapes.Sphere.to_data" title="compas_occ.interop.shapes.Sphere.to_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_data</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.interop.shapes.Sphere.from_jsonstring.html#compas_occ.interop.shapes.Sphere.from_jsonstring" title="compas_occ.interop.shapes.Sphere.from_jsonstring"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_jsonstring</span></code></a>(string)</p></td>
+<td><p>Construct an object from serialized data contained in a JSON string.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.interop.shapes.Sphere.to_data.html#compas_occ.interop.shapes.Sphere.to_data" title="compas_occ.interop.shapes.Sphere.to_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_data</span></code></a>()</p></td>
 <td><p>Convert an object to its native data representation.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.interop.shapes.Sphere.to_json.html#compas_occ.interop.shapes.Sphere.to_json" title="compas_occ.interop.shapes.Sphere.to_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_json</span></code></a>(filepath[, pretty])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.interop.shapes.Sphere.to_json.html#compas_occ.interop.shapes.Sphere.to_json" title="compas_occ.interop.shapes.Sphere.to_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_json</span></code></a>(filepath[, pretty])</p></td>
 <td><p>Serialize the data representation of an object to a JSON file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.interop.shapes.Sphere.to_jsonstring.html#compas_occ.interop.shapes.Sphere.to_jsonstring" title="compas_occ.interop.shapes.Sphere.to_jsonstring"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_jsonstring</span></code></a>([pretty])</p></td>
+<td><p>Serialize the data representation of an object to a JSON string.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="compas_occ.interop.shapes.Sphere.to_occ_shape.html#compas_occ.interop.shapes.Sphere.to_occ_shape" title="compas_occ.interop.shapes.Sphere.to_occ_shape"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_occ_shape</span></code></a>()</p></td>
 <td><p>Convert a COMPAS sphere to an OCC shape.</p></td>
@@ -142,10 +148,10 @@
 <td><p>Returns a transformed copy of this primitive.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="compas_occ.interop.shapes.Sphere.validate_data.html#compas_occ.interop.shapes.Sphere.validate_data" title="compas_occ.interop.shapes.Sphere.validate_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_data</span></code></a>()</p></td>
-<td><p>Validate the data of this object against its data schema (<cite>self.DATASCHEMA</cite>).</p></td>
+<td><p>Validate the object’s data against its data schema (<cite>self.DATASCHEMA</cite>).</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.interop.shapes.Sphere.validate_json.html#compas_occ.interop.shapes.Sphere.validate_json" title="compas_occ.interop.shapes.Sphere.validate_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_json</span></code></a>()</p></td>
-<td><p>Validate the data loaded from a JSON representation of the data of this object against its data schema (<cite>self.DATASCHEMA</cite>).</p></td>
+<td><p>Validate the object’s data against its json schema (<cite>self.JSONSCHEMA</cite>).</p></td>
 </tr>
 </tbody>
 </table>

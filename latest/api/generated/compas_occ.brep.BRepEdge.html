@@ -19,7 +19,7 @@
   <link rel="stylesheet" type="text/css" href="../../_static/css/compas-reference.css" />
 
   
-    <link rel="next" title="BRepEdge.to_circle" href="compas_occ.brep.BRepEdge.to_circle.html" />
+    <link rel="next" title="BRepEdge.to_bezier" href="compas_occ.brep.BRepEdge.to_bezier.html" />
   
 
   
@@ -99,8 +99,30 @@
 <h1>BRepEdge</h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="compas_occ.brep.BRepEdge">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">compas_occ.brep.</span></span><span class="sig-name descname"><span class="pre">BRepEdge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">edge</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">OCC.Core.TopoDS.TopoDS_Edge</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/compas-dev/compas_occ/blob/main/src/compas_occ/brep/brepedge.py#L23"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">compas_occ.brep.</span></span><span class="sig-name descname"><span class="pre">BRepEdge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">edge</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">OCC.Core.TopoDS.TopoDS_Edge</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/compas-dev/compas_occ/blob/main/src/compas_occ/brep/brepedge.py#L25"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Class representing an edge in the BRep of a geometric shape.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>edge</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">TopoDS_Edge</span></code>) – The underlying OCC topological edge data structure.</p></li>
+<li><p><strong>type</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">BRepEdge.CurveType</span></code>, read-only) – The type of the geometric curve underlying the topological edge.</p></li>
+<li><p><strong>is_line</strong> (<em>bool, read-only</em>) – True if the underlying curve is a line.</p></li>
+<li><p><strong>is_circle</strong> (<em>bool, read-only</em>) – True if the underlying curve is a circle.</p></li>
+<li><p><strong>is_ellipse</strong> (<em>bool, read-only</em>) – True if the underlying curve is an ellipse.</p></li>
+<li><p><strong>is_hyperbola</strong> (<em>bool, read-only</em>) – True if the underlying curve is a hyperbola.</p></li>
+<li><p><strong>is_parabola</strong> (<em>bool, read-only</em>) – True if the underlying curve is a parabola.</p></li>
+<li><p><strong>is_bezier</strong> (<em>bool, read-only</em>) – True if the underlying curve is a bezier curve.</p></li>
+<li><p><strong>is_bspline</strong> (<em>bool, read-only</em>) – True if the underlying curve is a bspline curve.</p></li>
+<li><p><strong>is_other</strong> (<em>bool, read-only</em>) – True if the underlying curve is an other type of curve.</p></li>
+<li><p><strong>vertices</strong> (list of <a class="reference internal" href="compas_occ.brep.BRepVertex.html#compas_occ.brep.BRepVertex" title="compas_occ.brep.BRepVertex"><code class="xref py py-class docutils literal notranslate"><span class="pre">BRepVertex</span></code></a>, read-only) – The topological vertices of the edge.</p></li>
+<li><p><strong>first_vertex</strong> (<a class="reference internal" href="compas_occ.brep.BRepVertex.html#compas_occ.brep.BRepVertex" title="compas_occ.brep.BRepVertex"><code class="xref py py-class docutils literal notranslate"><span class="pre">BRepVertex</span></code></a>, read-only) – The first vertex with forward orientation.</p></li>
+<li><p><strong>last_vertex</strong> (<a class="reference internal" href="compas_occ.brep.BRepVertex.html#compas_occ.brep.BRepVertex" title="compas_occ.brep.BRepVertex"><code class="xref py py-class docutils literal notranslate"><span class="pre">BRepVertex</span></code></a>, read-only) – The first vertex with reversed orientation.</p></li>
+<li><p><strong>adaptor</strong></p></li>
+<li><p><strong>curve</strong></p></li>
+</ul>
+</dd>
+</dl>
 <p class="rubric">Methods</p>
 <table class="longtable docutils align-default">
 <colgroup>
@@ -108,11 +130,26 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.brep.BRepEdge.to_bezier.html#compas_occ.brep.BRepEdge.to_bezier" title="compas_occ.brep.BRepEdge.to_bezier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_bezier</span></code></a>()</p></td>
+<td><p>Convert the edge geometry to a bezier curve.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.brep.BRepEdge.to_bspline.html#compas_occ.brep.BRepEdge.to_bspline" title="compas_occ.brep.BRepEdge.to_bspline"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_bspline</span></code></a>()</p></td>
+<td><p>Convert the edge geometry to a bspline.</p></td>
+</tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.brep.BRepEdge.to_circle.html#compas_occ.brep.BRepEdge.to_circle" title="compas_occ.brep.BRepEdge.to_circle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_circle</span></code></a>()</p></td>
-<td><p></p></td>
+<td><p>Convert the edge geometry to a circle.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.brep.BRepEdge.to_ellipse.html#compas_occ.brep.BRepEdge.to_ellipse" title="compas_occ.brep.BRepEdge.to_ellipse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_ellipse</span></code></a>()</p></td>
+<td><p>Convert the edge geometry to an ellipse.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.brep.BRepEdge.to_hyperbola.html#compas_occ.brep.BRepEdge.to_hyperbola" title="compas_occ.brep.BRepEdge.to_hyperbola"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_hyperbola</span></code></a>()</p></td>
+<td><p>Convert the edge geometry to a hyperbola.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="compas_occ.brep.BRepEdge.to_line.html#compas_occ.brep.BRepEdge.to_line" title="compas_occ.brep.BRepEdge.to_line"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_line</span></code></a>()</p></td>
-<td><p></p></td>
+<td><p>Convert the edge geometry to a line.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.brep.BRepEdge.to_parabola.html#compas_occ.brep.BRepEdge.to_parabola" title="compas_occ.brep.BRepEdge.to_parabola"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_parabola</span></code></a>()</p></td>
+<td><p>Convert the edge geometry to a parabola.</p></td>
 </tr>
 </tbody>
 </table>
@@ -182,10 +219,10 @@
       
 
       
-        <a href="compas_occ.brep.BRepEdge.to_circle.html" title="BRepEdge.to_circle" class="nav-link footer-link float-end text-right d-flex w-50" rel="next">
+        <a href="compas_occ.brep.BRepEdge.to_bezier.html" title="BRepEdge.to_bezier" class="nav-link footer-link float-end text-right d-flex w-50" rel="next">
           <div class="nav-title footer-link flex-grow-1 align-self-center">
             <div class="nav-direction small font-weight-light">Next</div>
-            BRepEdge.to_circle
+            BRepEdge.to_bezier
           </div>
           <div class="nav-button p-2 m-2"><i class="fas fa-arrow-right"></i></div>
         </a>

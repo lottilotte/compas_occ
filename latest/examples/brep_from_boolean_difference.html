@@ -137,10 +137,13 @@
     <span class="k">else</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span>
 
-<span class="n">mesh</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">to_tesselation</span><span class="p">()</span>
+<span class="c1"># ==============================================================================</span>
+<span class="c1"># Visualisation</span>
+<span class="c1"># ==============================================================================</span>
 
 <span class="n">viewer</span> <span class="o">=</span> <span class="n">App</span><span class="p">()</span>
-<span class="n">viewer</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">viewer</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">to_tesselation</span><span class="p">(),</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
     <span class="n">viewer</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
@@ -178,6 +181,9 @@
 <li class="nav-item active"><a class="nav-link reference internal" href="../examples.html">Examples</a><ul class="nav flex-column active">
 <li class="nav-item active"><a class="nav-link active current reference internal" href="#">BRep Shape from Boolean Difference</a></li>
 <li class="nav-item"><a class="nav-link reference internal" href="brep_from_booleans.html">BRep Shape from Booleans</a></li>
+<li class="nav-item"><a class="nav-link reference internal" href="brep_from_corners.html">BRep from Corners</a></li>
+<li class="nav-item"><a class="nav-link reference internal" href="curve_from_interpolation.html">Curve From Interpolation</a></li>
+<li class="nav-item"><a class="nav-link reference internal" href="curve_from_poles.html">Curve From Poles and Knots</a></li>
 <li class="nav-item"><a class="nav-link reference internal" href="surface_points_on_uv.html">Surface Points along UV</a></li>
 </ul>
 </li>

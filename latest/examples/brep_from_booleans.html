@@ -19,7 +19,7 @@
   <link rel="stylesheet" type="text/css" href="../_static/css/compas-reference.css" />
 
   
-    <link rel="next" title="Surface Points along UV" href="surface_points_on_uv.html" />
+    <link rel="next" title="BRep from Corners" href="brep_from_corners.html" />
   
 
   
@@ -131,10 +131,12 @@
     <span class="n">BRep</span><span class="o">.</span><span class="n">from_boolean_union</span><span class="p">(</span><span class="n">BRep</span><span class="o">.</span><span class="n">from_boolean_union</span><span class="p">(</span><span class="n">C</span><span class="p">,</span> <span class="n">D</span><span class="p">),</span> <span class="n">E</span><span class="p">),</span>
 <span class="p">)</span>
 
-<span class="n">mesh</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">to_tesselation</span><span class="p">()</span>
+<span class="c1"># ==============================================================================</span>
+<span class="c1"># Visualisation</span>
+<span class="c1"># ==============================================================================</span>
 
 <span class="n">viewer</span> <span class="o">=</span> <span class="n">App</span><span class="p">()</span>
-<span class="n">viewer</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">mesh</span><span class="p">)</span>
+<span class="n">viewer</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">to_tesselation</span><span class="p">())</span>
 <span class="n">viewer</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </code></pre></div>
 </div>
@@ -162,6 +164,9 @@
 <li class="nav-item active"><a class="nav-link reference internal" href="../examples.html">Examples</a><ul class="nav flex-column active">
 <li class="nav-item"><a class="nav-link reference internal" href="brep_from_boolean_difference.html">BRep Shape from Boolean Difference</a></li>
 <li class="nav-item active"><a class="nav-link active current reference internal" href="#">BRep Shape from Booleans</a></li>
+<li class="nav-item"><a class="nav-link reference internal" href="brep_from_corners.html">BRep from Corners</a></li>
+<li class="nav-item"><a class="nav-link reference internal" href="curve_from_interpolation.html">Curve From Interpolation</a></li>
+<li class="nav-item"><a class="nav-link reference internal" href="curve_from_poles.html">Curve From Poles and Knots</a></li>
 <li class="nav-item"><a class="nav-link reference internal" href="surface_points_on_uv.html">Surface Points along UV</a></li>
 </ul>
 </li>
@@ -199,10 +204,10 @@
       
 
       
-        <a href="surface_points_on_uv.html" title="Surface Points along UV" class="nav-link footer-link float-end text-right d-flex w-50" rel="next">
+        <a href="brep_from_corners.html" title="BRep from Corners" class="nav-link footer-link float-end text-right d-flex w-50" rel="next">
           <div class="nav-title footer-link flex-grow-1 align-self-center">
             <div class="nav-direction small font-weight-light">Next</div>
-            Surface Points along UV
+            BRep from Corners
           </div>
           <div class="nav-button p-2 m-2"><i class="fas fa-arrow-right"></i></div>
         </a>

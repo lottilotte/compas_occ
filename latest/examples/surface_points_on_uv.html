@@ -23,7 +23,7 @@
   
 
   
-    <link rel="prev" title="BRep Shape from Booleans" href="brep_from_booleans.html" />
+    <link rel="prev" title="Curve From Poles and Knots" href="curve_from_poles.html" />
   
 
   <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
@@ -122,14 +122,18 @@
 
 <span class="n">surface</span> <span class="o">=</span> <span class="n">BSplineSurface</span><span class="o">.</span><span class="n">from_fill</span><span class="p">(</span><span class="n">spline1</span><span class="p">,</span> <span class="n">spline2</span><span class="p">)</span>
 
-<span class="n">points</span> <span class="o">=</span> <span class="n">Collection</span><span class="p">(</span><span class="n">surface</span><span class="o">.</span><span class="n">xyz</span><span class="p">(</span><span class="n">nu</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">nv</span><span class="o">=</span><span class="mi">100</span><span class="p">))</span>
+<span class="n">points</span> <span class="o">=</span> <span class="n">Collection</span><span class="p">(</span><span class="n">surface</span><span class="o">.</span><span class="n">xyz</span><span class="p">(</span><span class="n">nu</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">nv</span><span class="o">=</span><span class="mi">50</span><span class="p">))</span>
 
-<span class="n">mesh</span> <span class="o">=</span> <span class="n">surface</span><span class="o">.</span><span class="n">to_tesselation</span><span class="p">()</span>
-<span class="n">boundary</span> <span class="o">=</span> <span class="n">Polyline</span><span class="p">(</span><span class="n">mesh</span><span class="o">.</span><span class="n">vertices_attributes</span><span class="p">(</span><span class="s1">&#39;xyz&#39;</span><span class="p">,</span> <span class="n">keys</span><span class="o">=</span><span class="n">mesh</span><span class="o">.</span><span class="n">vertices_on_boundary</span><span class="p">()))</span>
+<span class="c1"># ==============================================================================</span>
+<span class="c1"># Visualisation</span>
+<span class="c1"># ==============================================================================</span>
 
 <span class="n">view</span> <span class="o">=</span> <span class="n">App</span><span class="p">()</span>
-<span class="n">view</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">boundary</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">view</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Polyline</span><span class="p">(</span><span class="n">spline1</span><span class="o">.</span><span class="n">locus</span><span class="p">()),</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">view</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Polyline</span><span class="p">(</span><span class="n">spline2</span><span class="o">.</span><span class="n">locus</span><span class="p">()),</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">view</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+
 <span class="n">view</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </code></pre></div>
 </div>
@@ -157,6 +161,9 @@
 <li class="nav-item active"><a class="nav-link reference internal" href="../examples.html">Examples</a><ul class="nav flex-column active">
 <li class="nav-item"><a class="nav-link reference internal" href="brep_from_boolean_difference.html">BRep Shape from Boolean Difference</a></li>
 <li class="nav-item"><a class="nav-link reference internal" href="brep_from_booleans.html">BRep Shape from Booleans</a></li>
+<li class="nav-item"><a class="nav-link reference internal" href="brep_from_corners.html">BRep from Corners</a></li>
+<li class="nav-item"><a class="nav-link reference internal" href="curve_from_interpolation.html">Curve From Interpolation</a></li>
+<li class="nav-item"><a class="nav-link reference internal" href="curve_from_poles.html">Curve From Poles and Knots</a></li>
 <li class="nav-item active"><a class="nav-link active current reference internal" href="#">Surface Points along UV</a></li>
 </ul>
 </li>
@@ -184,11 +191,11 @@
   <footer class="compas-footer">
     <nav class="nav p-2">
       
-        <a href="brep_from_booleans.html" title="BRep Shape from Booleans" class="nav-link footer-link float-start text-left d-flex w-50" rel="prev">
+        <a href="curve_from_poles.html" title="Curve From Poles and Knots" class="nav-link footer-link float-start text-left d-flex w-50" rel="prev">
           <div class="nav-button p-2 m-2"><i class="fas fa-arrow-left"></i></div>
           <div class="nav-title flex-grow-1 align-self-center">
             <div class="nav-direction small font-weight-light">Previous</div>
-            BRep Shape from Booleans
+            Curve From Poles and Knots
           </div>
         </a>
       

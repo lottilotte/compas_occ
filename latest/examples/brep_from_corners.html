@@ -97,7 +97,7 @@
 <img alt="../_images/example_brep_from_corners.png" class="figure-img img-fluid" src="../_images/example_brep_from_corners.png" />
 </figure>
 <div class="language-python notranslate"><div class="highlight"><pre><code><span></span><span class="kn">from</span> <span class="nn">compas.geometry</span> <span class="kn">import</span> <span class="n">Point</span>
-<span class="kn">from</span> <span class="nn">compas_occ.brep.brep</span> <span class="kn">import</span> <span class="n">BRep</span>
+<span class="kn">from</span> <span class="nn">compas_occ.brep</span> <span class="kn">import</span> <span class="n">BRep</span>
 <span class="kn">from</span> <span class="nn">compas_view2.app</span> <span class="kn">import</span> <span class="n">App</span>
 
 <span class="n">brep3</span> <span class="o">=</span> <span class="n">BRep</span><span class="o">.</span><span class="n">from_corners</span><span class="p">(</span><span class="n">Point</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">Point</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">Point</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>

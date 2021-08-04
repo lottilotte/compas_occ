@@ -23,7 +23,7 @@
   
 
   
-    <link rel="prev" title="BSplineCurve.xyz" href="compas_occ.geometry.BSplineCurve.xyz.html" />
+    <link rel="prev" title="Surface.validate_json" href="compas_occ.geometry.Surface.validate_json.html" />
   
 
   <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
@@ -99,8 +99,8 @@
 <h1>BSplineSurface</h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="compas_occ.geometry.BSplineSurface">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">compas_occ.geometry.</span></span><span class="sig-name descname"><span class="pre">BSplineSurface</span></span><a class="reference external" href="https://github.com/compas-dev/compas_occ/blob/main/src/compas_occ/geometry/surfaces/bspline.py#L69"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">compas_occ.geometry.</span></span><span class="sig-name descname"><span class="pre">BSplineSurface</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/compas-dev/compas_occ/blob/main/src/compas_occ/geometry/surfaces/bspline.py#L68"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Bases: <a class="reference internal" href="compas_occ.geometry.Surface.html#compas_occ.geometry.Surface" title="compas_occ.geometry.surfaces._surface.Surface"><code class="xref py py-class docutils literal notranslate"><span class="pre">compas_occ.geometry.surfaces._surface.Surface</span></code></a></p>
 <p class="rubric">Methods</p>
 <table class="longtable docutils align-default">
 <colgroup>
@@ -109,34 +109,52 @@
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineSurface.copy.html#compas_occ.geometry.BSplineSurface.copy" title="compas_occ.geometry.BSplineSurface.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>()</p></td>
-<td><p></p></td>
+<td><p>Make an independent copy of the data object.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineSurface.frame_at.html#compas_occ.geometry.BSplineSurface.frame_at" title="compas_occ.geometry.BSplineSurface.frame_at"><code class="xref py py-obj docutils literal notranslate"><span class="pre">frame_at</span></code></a>(u, v)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineSurface.from_face.html#compas_occ.geometry.BSplineSurface.from_face" title="compas_occ.geometry.BSplineSurface.from_face"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_face</span></code></a>(face)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineSurface.from_data.html#compas_occ.geometry.BSplineSurface.from_data" title="compas_occ.geometry.BSplineSurface.from_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_data</span></code></a>(data)</p></td>
+<td><p>Construct a BSpline surface from its data representation.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineSurface.from_face.html#compas_occ.geometry.BSplineSurface.from_face" title="compas_occ.geometry.BSplineSurface.from_face"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_face</span></code></a>(face)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineSurface.from_fill.html#compas_occ.geometry.BSplineSurface.from_fill" title="compas_occ.geometry.BSplineSurface.from_fill"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_fill</span></code></a>(curve1, curve2)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineSurface.from_fill.html#compas_occ.geometry.BSplineSurface.from_fill" title="compas_occ.geometry.BSplineSurface.from_fill"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_fill</span></code></a>(curve1, curve2)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineSurface.from_occ.html#compas_occ.geometry.BSplineSurface.from_occ" title="compas_occ.geometry.BSplineSurface.from_occ"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_occ</span></code></a>(occ_surface)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineSurface.from_json.html#compas_occ.geometry.BSplineSurface.from_json" title="compas_occ.geometry.BSplineSurface.from_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_json</span></code></a>(filepath)</p></td>
+<td><p>Construct an object from serialized data contained in a JSON file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineSurface.from_jsonstring.html#compas_occ.geometry.BSplineSurface.from_jsonstring" title="compas_occ.geometry.BSplineSurface.from_jsonstring"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_jsonstring</span></code></a>(string)</p></td>
+<td><p>Construct an object from serialized data contained in a JSON string.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineSurface.from_occ.html#compas_occ.geometry.BSplineSurface.from_occ" title="compas_occ.geometry.BSplineSurface.from_occ"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_occ</span></code></a>(occ_surface)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineSurface.from_parameters.html#compas_occ.geometry.BSplineSurface.from_parameters" title="compas_occ.geometry.BSplineSurface.from_parameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_parameters</span></code></a>(poles, u_knots, v_knots, …)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineSurface.from_parameters.html#compas_occ.geometry.BSplineSurface.from_parameters" title="compas_occ.geometry.BSplineSurface.from_parameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_parameters</span></code></a>(poles, u_knots, v_knots, …)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineSurface.from_points.html#compas_occ.geometry.BSplineSurface.from_points" title="compas_occ.geometry.BSplineSurface.from_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_points</span></code></a>(points)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineSurface.from_points.html#compas_occ.geometry.BSplineSurface.from_points" title="compas_occ.geometry.BSplineSurface.from_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_points</span></code></a>(points)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineSurface.from_step.html#compas_occ.geometry.BSplineSurface.from_step" title="compas_occ.geometry.BSplineSurface.from_step"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_step</span></code></a>(filepath)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineSurface.from_step.html#compas_occ.geometry.BSplineSurface.from_step" title="compas_occ.geometry.BSplineSurface.from_step"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_step</span></code></a>(filepath)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineSurface.intersections.html#compas_occ.geometry.BSplineSurface.intersections" title="compas_occ.geometry.BSplineSurface.intersections"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intersections</span></code></a>(line)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineSurface.intersections.html#compas_occ.geometry.BSplineSurface.intersections" title="compas_occ.geometry.BSplineSurface.intersections"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intersections</span></code></a>(line)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineSurface.point_at.html#compas_occ.geometry.BSplineSurface.point_at" title="compas_occ.geometry.BSplineSurface.point_at"><code class="xref py py-obj docutils literal notranslate"><span class="pre">point_at</span></code></a>(u, v)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineSurface.point_at.html#compas_occ.geometry.BSplineSurface.point_at" title="compas_occ.geometry.BSplineSurface.point_at"><code class="xref py py-obj docutils literal notranslate"><span class="pre">point_at</span></code></a>(u, v)</p></td>
 <td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineSurface.to_data.html#compas_occ.geometry.BSplineSurface.to_data" title="compas_occ.geometry.BSplineSurface.to_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_data</span></code></a>()</p></td>
+<td><p>Convert an object to its native data representation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineSurface.to_json.html#compas_occ.geometry.BSplineSurface.to_json" title="compas_occ.geometry.BSplineSurface.to_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_json</span></code></a>(filepath[, pretty])</p></td>
+<td><p>Serialize the data representation of an object to a JSON file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineSurface.to_jsonstring.html#compas_occ.geometry.BSplineSurface.to_jsonstring" title="compas_occ.geometry.BSplineSurface.to_jsonstring"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_jsonstring</span></code></a>([pretty])</p></td>
+<td><p>Serialize the data representation of an object to a JSON string.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineSurface.to_step.html#compas_occ.geometry.BSplineSurface.to_step" title="compas_occ.geometry.BSplineSurface.to_step"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_step</span></code></a>(filepath[, schema])</p></td>
 <td><p></p></td>
@@ -155,6 +173,12 @@
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineSurface.uspace.html#compas_occ.geometry.BSplineSurface.uspace" title="compas_occ.geometry.BSplineSurface.uspace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">uspace</span></code></a>([n])</p></td>
 <td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineSurface.validate_data.html#compas_occ.geometry.BSplineSurface.validate_data" title="compas_occ.geometry.BSplineSurface.validate_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_data</span></code></a>()</p></td>
+<td><p>Validate the object’s data against its data schema (<cite>self.DATASCHEMA</cite>).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineSurface.validate_json.html#compas_occ.geometry.BSplineSurface.validate_json" title="compas_occ.geometry.BSplineSurface.validate_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_json</span></code></a>()</p></td>
+<td><p>Validate the object’s data against its json schema (<cite>self.JSONSCHEMA</cite>).</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineSurface.vspace.html#compas_occ.geometry.BSplineSurface.vspace" title="compas_occ.geometry.BSplineSurface.vspace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vspace</span></code></a>([n])</p></td>
 <td><p></p></td>
@@ -220,11 +244,11 @@
   <footer class="compas-footer">
     <nav class="nav p-2">
       
-        <a href="compas_occ.geometry.BSplineCurve.xyz.html" title="BSplineCurve.xyz" class="nav-link footer-link float-start text-left d-flex w-50" rel="prev">
+        <a href="compas_occ.geometry.Surface.validate_json.html" title="Surface.validate_json" class="nav-link footer-link float-start text-left d-flex w-50" rel="prev">
           <div class="nav-button p-2 m-2"><i class="fas fa-arrow-left"></i></div>
           <div class="nav-title flex-grow-1 align-self-center">
             <div class="nav-direction small font-weight-light">Previous</div>
-            BSplineCurve.xyz
+            Surface.validate_json
           </div>
         </a>
       

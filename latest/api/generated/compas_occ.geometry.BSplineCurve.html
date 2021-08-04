@@ -23,7 +23,7 @@
   
 
   
-    <link rel="prev" title="compas_occ.geometry" href="../compas_occ.geometry.html" />
+    <link rel="prev" title="Curve.validate_json" href="compas_occ.geometry.Curve.validate_json.html" />
   
 
   <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
@@ -100,8 +100,39 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="compas_occ.geometry.BSplineCurve">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">compas_occ.geometry.</span></span><span class="sig-name descname"><span class="pre">BSplineCurve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/compas-dev/compas_occ/blob/main/src/compas_occ/geometry/curves/bspline.py#L44"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">compas_occ.geometry.curves._curve.Curve</span></code></p>
-<p>Wrapper for OCC BSplineCurve.</p>
+<dd><p>Bases: <a class="reference internal" href="compas_occ.geometry.Curve.html#compas_occ.geometry.Curve" title="compas_occ.geometry.curves._curve.Curve"><code class="xref py py-class docutils literal notranslate"><span class="pre">compas_occ.geometry.curves._curve.Curve</span></code></a></p>
+<p>Class representing a B-spline based on the BSplineCurve of OCC.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>poles</strong> (<em>List[Point]</em>) – The control points of the curve.</p></li>
+<li><p><strong>knots</strong> (<em>List[float]</em>) – The knot vector, without duplicates.</p></li>
+<li><p><strong>multiplicities</strong> (<em>List[int]</em>) – The multiplicities of the knots in the knot vector.</p></li>
+<li><p><strong>knotsequence</strong> (<em>List[float]</em>) – The knot vector, with repeating values according to the multiplicities.</p></li>
+<li><p><strong>degree</strong> (<em>int</em>) – The degree of the polynomials.</p></li>
+<li><p><strong>domain</strong> (<em>Tuple[float, float]</em>) – The parameter domain.</p></li>
+<li><p><strong>order</strong> (<em>int</em>) – The order of the curve.</p></li>
+<li><p><strong>start</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Point</span></code>) – The point corresponding to the start of the parameter domain.</p></li>
+<li><p><strong>end</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Point</span></code>) – The point corresponding to the end of the parameter domain.</p></li>
+<li><p><strong>is_closed</strong> (<em>bool</em>) – True if the curve is closed.</p></li>
+<li><p><strong>is_periodic</strong> (<em>bool</em>) – True if the curve is periodic.</p></li>
+<li><p><strong>is_rational</strong> (<em>bool</em>) – True is the curve is rational.</p></li>
+<li><p><strong>length</strong> (<em>float</em>) – Length of the curve.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<dl class="footnote brackets">
+<dt class="label" id="id1"><span class="brackets">1</span></dt>
+<dd><p><a class="reference external" href="https://en.wikipedia.org/wiki/B-spline">https://en.wikipedia.org/wiki/B-spline</a></p>
+</dd>
+<dt class="label" id="id2"><span class="brackets">2</span></dt>
+<dd><p><a class="reference external" href="https://mathworld.wolfram.com/B-spline.html">https://mathworld.wolfram.com/B-spline.html</a></p>
+</dd>
+<dt class="label" id="id3"><span class="brackets">3</span></dt>
+<dd><p><a class="reference external" href="https://dev.opencascade.org/doc/occt-7.4.0/refman/html/class_geom___b_spline_curve.html">https://dev.opencascade.org/doc/occt-7.4.0/refman/html/class_geom___b_spline_curve.html</a></p>
+</dd>
+</dl>
 <p class="rubric">Methods</p>
 <table class="longtable docutils align-default">
 <colgroup>
@@ -110,19 +141,19 @@
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.closest_point.html#compas_occ.geometry.BSplineCurve.closest_point" title="compas_occ.geometry.BSplineCurve.closest_point"><code class="xref py py-obj docutils literal notranslate"><span class="pre">closest_point</span></code></a>(point[, distance])</p></td>
-<td><p></p></td>
+<td><p>Compute the closest point on the curve to a given point.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.copy.html#compas_occ.geometry.BSplineCurve.copy" title="compas_occ.geometry.BSplineCurve.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>()</p></td>
-<td><p>Make an independent copy of the data object.</p></td>
+<td><p>Make an independent copy of the current curve.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.curvature_at.html#compas_occ.geometry.BSplineCurve.curvature_at" title="compas_occ.geometry.BSplineCurve.curvature_at"><code class="xref py py-obj docutils literal notranslate"><span class="pre">curvature_at</span></code></a>(t)</p></td>
 <td><p>Compute the curvature at a point on the curve.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.divide_by_count.html#compas_occ.geometry.BSplineCurve.divide_by_count" title="compas_occ.geometry.BSplineCurve.divide_by_count"><code class="xref py py-obj docutils literal notranslate"><span class="pre">divide_by_count</span></code></a>(count)</p></td>
-<td><p></p></td>
+<td><p>Divide the curve into a specific number of equal length segments.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.divide_by_length.html#compas_occ.geometry.BSplineCurve.divide_by_length" title="compas_occ.geometry.BSplineCurve.divide_by_length"><code class="xref py py-obj docutils literal notranslate"><span class="pre">divide_by_length</span></code></a>(length)</p></td>
-<td><p></p></td>
+<td><p>Divide the curve into segments of specified length.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.fair.html#compas_occ.geometry.BSplineCurve.fair" title="compas_occ.geometry.BSplineCurve.fair"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fair</span></code></a>()</p></td>
 <td><p></p></td>
@@ -137,16 +168,16 @@
 <td><p></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.from_data.html#compas_occ.geometry.BSplineCurve.from_data" title="compas_occ.geometry.BSplineCurve.from_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_data</span></code></a>(data)</p></td>
-<td><p>Construct a BSpline curve from its data representation.</p></td>
+<td><p>Construct a B-spline from its data representation.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.from_edge.html#compas_occ.geometry.BSplineCurve.from_edge" title="compas_occ.geometry.BSplineCurve.from_edge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_edge</span></code></a>(edge)</p></td>
-<td><p></p></td>
+<td><p>Construct a B-spline from an OCC edge.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.from_ellipse.html#compas_occ.geometry.BSplineCurve.from_ellipse" title="compas_occ.geometry.BSplineCurve.from_ellipse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_ellipse</span></code></a>(ellipse, degree[, pointcount])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.from_interpolation.html#compas_occ.geometry.BSplineCurve.from_interpolation" title="compas_occ.geometry.BSplineCurve.from_interpolation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_interpolation</span></code></a>(points)</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.from_interpolation.html#compas_occ.geometry.BSplineCurve.from_interpolation" title="compas_occ.geometry.BSplineCurve.from_interpolation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_interpolation</span></code></a>(points[, precision])</p></td>
+<td><p>Construct a B-spline by interpolating a set of points.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.from_json.html#compas_occ.geometry.BSplineCurve.from_json" title="compas_occ.geometry.BSplineCurve.from_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_json</span></code></a>(filepath)</p></td>
 <td><p>Construct an object from serialized data contained in a JSON file.</p></td>
@@ -158,55 +189,52 @@
 <td><p></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.from_occ.html#compas_occ.geometry.BSplineCurve.from_occ" title="compas_occ.geometry.BSplineCurve.from_occ"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_occ</span></code></a>(occ_curve)</p></td>
-<td><p></p></td>
+<td><p>Construct a B-spline from OCC geometry.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.from_parameters.html#compas_occ.geometry.BSplineCurve.from_parameters" title="compas_occ.geometry.BSplineCurve.from_parameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_parameters</span></code></a>(poles, knots, …[, is_periodic])</p></td>
-<td><p>Construct a curve from poles and knots.</p></td>
+<td><p>Construct a B-spline from control points.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.from_points.html#compas_occ.geometry.BSplineCurve.from_points" title="compas_occ.geometry.BSplineCurve.from_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_points</span></code></a>(points)</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.from_step.html#compas_occ.geometry.BSplineCurve.from_step" title="compas_occ.geometry.BSplineCurve.from_step"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_step</span></code></a>(filepath)</p></td>
+<td><p>Load a B-spline from a STP file.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.from_step.html#compas_occ.geometry.BSplineCurve.from_step" title="compas_occ.geometry.BSplineCurve.from_step"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_step</span></code></a>(filepath)</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.locus.html#compas_occ.geometry.BSplineCurve.locus" title="compas_occ.geometry.BSplineCurve.locus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locus</span></code></a>([resolution])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.locus.html#compas_occ.geometry.BSplineCurve.locus" title="compas_occ.geometry.BSplineCurve.locus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locus</span></code></a>([resolution])</p></td>
 <td><p>Compute the locus of all points on the curve.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.point_at.html#compas_occ.geometry.BSplineCurve.point_at" title="compas_occ.geometry.BSplineCurve.point_at"><code class="xref py py-obj docutils literal notranslate"><span class="pre">point_at</span></code></a>(u)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.point_at.html#compas_occ.geometry.BSplineCurve.point_at" title="compas_occ.geometry.BSplineCurve.point_at"><code class="xref py py-obj docutils literal notranslate"><span class="pre">point_at</span></code></a>(u)</p></td>
 <td><p>Compute a point on the curve.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.space.html#compas_occ.geometry.BSplineCurve.space" title="compas_occ.geometry.BSplineCurve.space"><code class="xref py py-obj docutils literal notranslate"><span class="pre">space</span></code></a>([n])</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.space.html#compas_occ.geometry.BSplineCurve.space" title="compas_occ.geometry.BSplineCurve.space"><code class="xref py py-obj docutils literal notranslate"><span class="pre">space</span></code></a>([n])</p></td>
+<td><p>Compute evenly spaced parameters over the curve domain.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.tangent_at.html#compas_occ.geometry.BSplineCurve.tangent_at" title="compas_occ.geometry.BSplineCurve.tangent_at"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tangent_at</span></code></a>(t)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.tangent_at.html#compas_occ.geometry.BSplineCurve.tangent_at" title="compas_occ.geometry.BSplineCurve.tangent_at"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tangent_at</span></code></a>(t)</p></td>
 <td><p>Compute the tangent vector at a point on the curve.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.to_data.html#compas_occ.geometry.BSplineCurve.to_data" title="compas_occ.geometry.BSplineCurve.to_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_data</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.to_data.html#compas_occ.geometry.BSplineCurve.to_data" title="compas_occ.geometry.BSplineCurve.to_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_data</span></code></a>()</p></td>
 <td><p>Convert an object to its native data representation.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.to_json.html#compas_occ.geometry.BSplineCurve.to_json" title="compas_occ.geometry.BSplineCurve.to_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_json</span></code></a>(filepath[, pretty])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.to_json.html#compas_occ.geometry.BSplineCurve.to_json" title="compas_occ.geometry.BSplineCurve.to_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_json</span></code></a>(filepath[, pretty])</p></td>
 <td><p>Serialize the data representation of an object to a JSON file.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.to_jsonstring.html#compas_occ.geometry.BSplineCurve.to_jsonstring" title="compas_occ.geometry.BSplineCurve.to_jsonstring"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_jsonstring</span></code></a>([pretty])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.to_jsonstring.html#compas_occ.geometry.BSplineCurve.to_jsonstring" title="compas_occ.geometry.BSplineCurve.to_jsonstring"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_jsonstring</span></code></a>([pretty])</p></td>
 <td><p>Serialize the data representation of an object to a JSON string.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.to_step.html#compas_occ.geometry.BSplineCurve.to_step" title="compas_occ.geometry.BSplineCurve.to_step"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_step</span></code></a>(filepath[, schema])</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.to_step.html#compas_occ.geometry.BSplineCurve.to_step" title="compas_occ.geometry.BSplineCurve.to_step"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_step</span></code></a>(filepath[, schema])</p></td>
+<td><p>Write the curve geometry to a STP file.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.transform.html#compas_occ.geometry.BSplineCurve.transform" title="compas_occ.geometry.BSplineCurve.transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform</span></code></a>(T)</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.transform.html#compas_occ.geometry.BSplineCurve.transform" title="compas_occ.geometry.BSplineCurve.transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform</span></code></a>(T)</p></td>
+<td><p>Transform this curve.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.transformed.html#compas_occ.geometry.BSplineCurve.transformed" title="compas_occ.geometry.BSplineCurve.transformed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transformed</span></code></a>(T)</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.transformed.html#compas_occ.geometry.BSplineCurve.transformed" title="compas_occ.geometry.BSplineCurve.transformed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transformed</span></code></a>(T)</p></td>
+<td><p>Transform a copy of the curve.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.validate_data.html#compas_occ.geometry.BSplineCurve.validate_data" title="compas_occ.geometry.BSplineCurve.validate_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_data</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.validate_data.html#compas_occ.geometry.BSplineCurve.validate_data" title="compas_occ.geometry.BSplineCurve.validate_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_data</span></code></a>()</p></td>
 <td><p>Validate the object’s data against its data schema (<cite>self.DATASCHEMA</cite>).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.validate_json.html#compas_occ.geometry.BSplineCurve.validate_json" title="compas_occ.geometry.BSplineCurve.validate_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_json</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.validate_json.html#compas_occ.geometry.BSplineCurve.validate_json" title="compas_occ.geometry.BSplineCurve.validate_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_json</span></code></a>()</p></td>
 <td><p>Validate the object’s data against its json schema (<cite>self.JSONSCHEMA</cite>).</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.xyz.html#compas_occ.geometry.BSplineCurve.xyz" title="compas_occ.geometry.BSplineCurve.xyz"><code class="xref py py-obj docutils literal notranslate"><span class="pre">xyz</span></code></a>([n])</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_occ.geometry.BSplineCurve.xyz.html#compas_occ.geometry.BSplineCurve.xyz" title="compas_occ.geometry.BSplineCurve.xyz"><code class="xref py py-obj docutils literal notranslate"><span class="pre">xyz</span></code></a>([n])</p></td>
+<td><p>Compute point locations corresponding to evenly spaced parameters over the curve domain.</p></td>
 </tr>
 </tbody>
 </table>
@@ -266,11 +294,11 @@
   <footer class="compas-footer">
     <nav class="nav p-2">
       
-        <a href="../compas_occ.geometry.html" title="compas_occ.geometry" class="nav-link footer-link float-start text-left d-flex w-50" rel="prev">
+        <a href="compas_occ.geometry.Curve.validate_json.html" title="Curve.validate_json" class="nav-link footer-link float-start text-left d-flex w-50" rel="prev">
           <div class="nav-button p-2 m-2"><i class="fas fa-arrow-left"></i></div>
           <div class="nav-title flex-grow-1 align-self-center">
             <div class="nav-direction small font-weight-light">Previous</div>
-            compas_occ.geometry
+            Curve.validate_json
           </div>
         </a>
       

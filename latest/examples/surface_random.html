@@ -98,8 +98,6 @@
 </figure>
 <div class="language-python notranslate"><div class="highlight"><pre><code><span></span><span class="kn">import</span> <span class="nn">random</span>
 
-<span class="kn">from</span> <span class="nn">OCC.Core.gp</span> <span class="kn">import</span> <span class="n">gp_Pnt</span>
-
 <span class="kn">from</span> <span class="nn">compas.geometry</span> <span class="kn">import</span> <span class="n">Polyline</span>
 <span class="kn">from</span> <span class="nn">compas_occ.geometry</span> <span class="kn">import</span> <span class="n">NurbsSurface</span>
 
@@ -116,10 +114,11 @@
 <span class="c1"># Update</span>
 <span class="c1"># ==============================================================================</span>
 
-<span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">U</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">V</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
-        <span class="n">pole</span> <span class="o">=</span> <span class="n">surface</span><span class="o">.</span><span class="n">occ_surface</span><span class="o">.</span><span class="n">Pole</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
-        <span class="n">surface</span><span class="o">.</span><span class="n">occ_surface</span><span class="o">.</span><span class="n">SetPole</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">gp_Pnt</span><span class="p">(</span><span class="n">pole</span><span class="o">.</span><span class="n">X</span><span class="p">(),</span> <span class="n">pole</span><span class="o">.</span><span class="n">Y</span><span class="p">(),</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()))</span>
+<span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">U</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">V</span><span class="p">):</span>
+        <span class="n">point</span> <span class="o">=</span> <span class="n">surface</span><span class="o">.</span><span class="n">points</span><span class="p">[</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">]</span>
+        <span class="n">point</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+        <span class="n">surface</span><span class="o">.</span><span class="n">points</span><span class="p">[</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">point</span>
 
 <span class="c1"># ==============================================================================</span>
 <span class="c1"># Visualisation</span>

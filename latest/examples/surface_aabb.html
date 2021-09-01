@@ -135,7 +135,7 @@
 <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span> <span class="n">surface</span><span class="o">.</span><span class="n">points</span><span class="p">):</span>
     <span class="n">view</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Polyline</span><span class="p">(</span><span class="n">col</span><span class="p">),</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">linecolor</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 
-<span class="n">view</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">surface</span><span class="p">)</span>
+<span class="n">view</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">surface</span><span class="o">.</span><span class="n">to_mesh</span><span class="p">(),</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">view</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">box</span><span class="p">,</span> <span class="n">show_faces</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="n">view</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>

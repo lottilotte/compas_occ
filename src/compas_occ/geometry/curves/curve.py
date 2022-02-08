@@ -23,6 +23,8 @@ from OCC.Core.IFSelect import IFSelect_RetDone
 from OCC.Core.STEPControl import STEPControl_Writer
 from OCC.Core.STEPControl import STEPControl_AsIs
 
+from OCC.Core.GeomConvert import GeomConvert_CompCurveToBSplineCurve
+
 from compas_occ.conversions import compas_point_from_occ_point
 from compas_occ.conversions import compas_vector_from_occ_vector
 
@@ -458,3 +460,14 @@ class OCCCurve(Curve):
         if not return_distance:
             return points
         return points, extrema.LowerDistance()
+
+    def joined(self, curve):
+        """Append a curve in the BSpline"""
+
+        converter = GeomConvert_CompCurveToBSplineCurve(self.occ_curve)
+        success = converter.Add(curve.occ_curve, 0.01)
+        if success:
+            curve.occ_curve = converter.BSplineCurve()
+            return curve
+        else:
+            return None
